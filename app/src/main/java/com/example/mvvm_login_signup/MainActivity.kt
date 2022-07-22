@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                 val password = binding.edtPassword.text.toString().trim()
                 val student = Student(email, password)
                 val intent = Intent(applicationContext, ProfileActivity::class.java)
+                Toast.makeText(applicationContext,"Thành công",Toast.LENGTH_LONG).show()
                 val bundle = Bundle()
                 bundle.putParcelable(Constants.KEY_USER, student)
                 intent.putExtras(bundle)
